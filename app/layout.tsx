@@ -42,12 +42,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    
-      
-        
-          {children}
-        
-      
-    
+    <RootProvider>
+      <html lang="en">
+        <body className={`${inter.variable} ${sourceCodePro.variable}`}>
+          <SafeArea>{children}</SafeArea>
+        </body>
+      </html>
+    </RootProvider>
   );
 }
