@@ -5,19 +5,12 @@ import { minikitConfig } from "../minikit.config";
 import { RootProvider } from "./rootProvider";
 import "./globals.css";
 
-export const metadata: Metadata = {
-  title: 'Kagey!!',
-  description: 'Ads',
-  other: {
-    'base:app_id': '694253c2d19763ca26ddc386'
-  }
-}
-
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: minikitConfig.miniapp.name,
     description: minikitConfig.miniapp.description,
     other: {
+      'base:app_id': '694253c2d19763ca26ddc386',
       "fc:frame": JSON.stringify({
         version: minikitConfig.miniapp.version,
         imageUrl: minikitConfig.miniapp.heroImageUrl,
@@ -49,12 +42,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <RootProvider>
-      <html lang="en">
-        <body className={`${inter.variable} ${sourceCodePro.variable}`}>
-          <SafeArea>{children}</SafeArea>
-        </body>
-      </html>
-    </RootProvider>
+    
+      
+        
+          {children}
+        
+      
+    
   );
 }
